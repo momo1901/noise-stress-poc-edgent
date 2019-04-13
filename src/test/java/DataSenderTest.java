@@ -3,26 +3,31 @@ import sapienza.iot.DataBuilder;
 import sapienza.iot.EdgentApp;
 import java.util.Properties;
 
-import static org.junit.Assert.*;
-
 public class DataSenderTest {
 
+    @Test //Fill properties fields with specific device info
     public void InitEdgentApp() {
-        ReadSensorImpl sensor = new ReadSensorImpl();
+        ReadSensorTest sensor = new ReadSensorTest();
         DataBuilder builder = new DataBuilder();
-        builder.getDecibels(sensor)
-       
+        builder.setMinSensor(sensor);
+        builder.setMaxSensor(sensor);
+        builder.setAvgSensor(sensor);
+        builder.setDbSensor(sensor);
+        builder.setRealtimeSensor(sensor);
+
         Properties prop = new Properties();
 
-        prop.setProperty("org", "adp38s");
-        prop.setProperty("type", "myfitbit");
-        prop.setProperty("id", "CDDF5606C2D2");
-        prop.setProperty("auth-method", "token");
-        prop.setProperty("auth-token", "Xt2mzHfoYKLQAd)vUN");
+        prop.setProperty("org", "set org");
+        prop.setProperty("type", "set type");
+        prop.setProperty("id", "set id");
+        prop.setProperty("auth-method", "set token");
+        prop.setProperty("auth-token", "set auth-token");
 
         EdgentApp.init(prop, builder);
-
-        while(true){}
-
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }
