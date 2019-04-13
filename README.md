@@ -1,4 +1,4 @@
-# Sound meter POC - Edgent Library
+# Sound monitoring POC - Edgent Library
 
 This is an Android-friendly library to send data coming from sensors to a remote instance of IBM Watson.
 This library is based on the [Car Monitoring POC Edgent library](https://github.com/car-monitoring-sapienza-iot-2019/car_monitoring_poc_edgent).
