@@ -31,9 +31,9 @@ This library can be easily added to your existing project through Maven or Gradl
 2) Add the dependency
 ```
 <dependency>
-    <groupId>com.github.car-monitoring-sapienza-iot-2019</groupId>
-    <artifactId>car_monitoring_poc_edgent</artifactId>
-    <version>0.0.4</version>
+    <groupId>com.github.momo1901</groupId>
+    <artifactId>sound-meter-poc-edgent</artifactId>
+    <version>-SNAPSHOT</version>
 </dependency>
 ```
 
@@ -50,7 +50,7 @@ allprojects {
 2) Add the dependency
 ```
 dependencies {
-    implementation 'com.github.car-monitoring-sapienza-iot-2019:car_monitoring_poc_edgent:0.0.4'
+    implementation 'com.github.momo1901:sound-meter-poc-edgent:-SNAPSHOT'
 }
 ```
 
