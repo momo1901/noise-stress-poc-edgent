@@ -27,15 +27,15 @@ public class DataAggregator implements Supplier<JsonObject> {
     @Override
     public JsonObject get() {
         Integer min = null;
-        if (minSensor != null) this.minSensor.getInt();
+        if (minSensor != null) min = this.minSensor.getInt();
         Integer max = null;
-        if (maxSensor != null) this.maxSensor.getInt();
+        if (maxSensor != null) max = this.maxSensor.getInt();
         Integer avg = null;
-        if (avgSensor != null) this.avgSensor.getInt();
+        if (avgSensor != null) avg = this.avgSensor.getInt();
         Integer realtime = null;
-        if (realtimeSensor != null) this.realtimeSensor.getInt();
+        if (realtimeSensor != null) realtime = this.realtimeSensor.getInt();
         Float db = null;
-        if (dbSensor != null) this.dbSensor.getFloat();
+        if (dbSensor != null) db = this.dbSensor.getFloat();
         JsonObject obj = new JsonObject();
         if (db == null)
             obj.add("db", null);
