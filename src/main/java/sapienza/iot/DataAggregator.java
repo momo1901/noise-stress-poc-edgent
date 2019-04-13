@@ -2,12 +2,8 @@ package sapienza.iot;
 
 import com.google.gson.JsonObject;
 import org.apache.edgent.function.Supplier;
-import sapienza.iot.Interfaces.ReadDoubleSensor;
 import sapienza.iot.Interfaces.ReadFloatSensor;
 import sapienza.iot.Interfaces.ReadIntSensor;
-import sapienza.iot.Interfaces.ReadLocationSensor;
-
-import java.time.LocalDateTime;
 
 
 public class DataAggregator implements Supplier<JsonObject> {
@@ -30,11 +26,16 @@ public class DataAggregator implements Supplier<JsonObject> {
 
     @Override
     public JsonObject get() {
-        Integer min = this.minSensor.getInt();
-        Integer max = this.maxSensor.getInt();
-        Integer avg = this.avgSensor.getInt();
-        Integer realtime = this.realtimeSensor.getInt();
-        Float db = this.dbSensor.getFloat();
+        Integer min = null;
+        if (minSensor != null) min = this.minSensor.getInt();
+        Integer max = null;
+        if (maxSensor != null) max = this.maxSensor.getInt();
+        Integer avg = null;
+        if (avgSensor != null) avg = this.avgSensor.getInt();
+        Integer realtime = null;
+        if (realtimeSensor != null) realtime = this.realtimeSensor.getInt();
+        Float db = null;
+        if (dbSensor != null) db = this.dbSensor.getFloat();
         JsonObject obj = new JsonObject();
         if (db == null)
             obj.add("db", null);
