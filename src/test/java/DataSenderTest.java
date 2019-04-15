@@ -21,7 +21,7 @@ public class DataSenderTest {
         prop.setProperty("type", "noisemonitordevice");
         prop.setProperty("id", "noisemonitordevice");
         prop.setProperty("auth-method", "token");
-        prop.setProperty("auth-token", "");
+        prop.setProperty("auth-token", ")weOCzpPm5KiLL2rl0");
 
         EdgentApp.init(prop, builder);
         try {
