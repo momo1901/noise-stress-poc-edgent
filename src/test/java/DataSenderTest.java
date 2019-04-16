@@ -17,11 +17,11 @@ public class DataSenderTest {
 
         Properties prop = new Properties();
 
-        prop.setProperty("org", "adp38s");
-        prop.setProperty("type", "noisemonitordevice");
-        prop.setProperty("id", "noisemonitordevice");
+        prop.setProperty("org", "your org");
+        prop.setProperty("type", "your device type");
+        prop.setProperty("id", "your device id");
         prop.setProperty("auth-method", "token");
-        prop.setProperty("auth-token", ")weOCzpPm5KiLL2rl0");
+        prop.setProperty("auth-token", "your device auth token");
 
         EdgentApp.init(prop, builder);
         try {
